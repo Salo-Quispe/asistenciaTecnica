@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tecnicos",
+  "info": {
+    "singularName": "tecnico",
+    "pluralName": "tecnicos",
+    "displayName": "Tecnico",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "cedula": {
+      "type": "string"
+    },
+    "fecha_nacimiento": {
+      "type": "date"
+    },
+    "genero": {
+      "type": "string"
+    },
+    "ciudad": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ticket.ticket",
+      "mappedBy": "tecnico"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tickets",
+  "info": {
+    "singularName": "ticket",
+    "pluralName": "tickets",
+    "displayName": "Ticket"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "codigo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "tickets"
+    },
+    "tecnico": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tecnico.tecnico",
+      "inversedBy": "tickets"
+    }
+  }
+}
